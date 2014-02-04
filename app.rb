@@ -7,7 +7,7 @@ get '/' do
 end
 
 get '/chuchu' do
-  if request.xhr?
+  if request.xhr? # is an ajax request
     "hello world!"
   else 
     erb :tutu
