@@ -7,32 +7,42 @@ get '/' do
 end
 
 get '/chuchu' do
-  "hello world!"
+  if request.xhr?
+    "hello world!"
+  else 
+    erb :tutu
+  end
 end
 
 __END__
 
+@@layout
+  <!DOCTYPE html>
+  <html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Demo</title>
+    </head>
+    <body>
+        <a href="http://jquery.com/">jQuery</a>
+        <div class="result"></div>
+        <script src="jquery.js"></script>
+        <%= yield %>
+    </body>
+  </html>
+
 @@index
-<!DOCTYPE html>
-<html>
-  <head>
-      <meta charset="utf-8" />
-      <title>Demo</title>
-  </head>
-  <body>
-      <a href="http://jquery.com/">jQuery</a>
-      <div class="result"></div>
-      <script src="jquery.js"></script>
-      <script>
-      $( document ).ready(function() {
-          $( "a" ).click(function( event ) {
-              event.preventDefault();
-              $.get( "/chuchu", function( data ) {
-                $( ".result" ).html( data );
-                alert( "Load was performed." );
-              });
+  <script>
+  $( document ).ready(function() {
+      $( "a" ).click(function( event ) {
+          event.preventDefault();
+          $.get( "/chuchu", function( data ) {
+            $( ".result" ).html( data );
+            alert( "Load was performed." );
           });
       });
-      </script>
-  </body>
-</html>
+  });
+  </script>
+
+@@tutu
+  <h1>Not an Ajax Request!</h1>
