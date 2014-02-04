@@ -30,7 +30,7 @@ __END__
           alert( "Load was performed.\n"+
                  "$data = "+data+
                  "\ntextStatus = "+textStatus+
-                 "\njqXHR = "+jqXHR+
+                 "\njqXHR = "+JSON.stringify(jqXHR)+
                  "\nparam = "+param );
         };
         $( document ).ready(function() {
