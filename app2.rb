@@ -1,6 +1,8 @@
 require 'sinatra'
 
 set :public_folder, File.dirname(__FILE__) + '/starterkit'
+set :bind, '0.0.0.0'
+#set :port, 8080
 
 get '/' do
   erb :index
