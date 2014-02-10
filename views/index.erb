@@ -1,0 +1,11 @@
+  <script>
+  $( document ).ready(function() {
+      $( "a" ).click(function( event ) {
+          event.preventDefault();
+          $.get( "/chuchu", function( data ) {
+            $( ".result" ).html( data );
+            alert( "Load was performed." );
+          });
+      });
+  });
+  </script>
