@@ -10,6 +10,7 @@ __END__
 
 @@ index
 <h1> Visit <a href="/withajax.html">withajax.html</a> exampple</h1>
+<h1> Visit <a href="/withget.html">withget.html</a> exampple</h1>
 <h1> Visit <a href="/withfileapi.html">withfileapi.html</a> exampple</h1>
 
 @@layout
