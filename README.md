@@ -1,4 +1,4 @@
-Thre are four brnaches:
+Thre are four branches:
 
       [~/javascript/jquery/how-jquery-works-tutorial(master)]$ git branch 
         getallparams
