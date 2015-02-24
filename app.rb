@@ -8,46 +8,39 @@ get '/' do
   erb :index
 end
 
-get '/chuchu' do
+get '/demo_ajax_script.js' do
   pp env
-  p params[:nombres]
   if request.xhr? # is an ajax request
-   %q{{"answer": "Server responds: hello world!"}}
+    "alert('This JavaScript alert was loaded by AJAX');"
   else 
-    erb :tutu
+   %q{Not an AJAX request!}
   end
 end
 
 __END__
 
-@@layout
-  <!DOCTYPE html>
-  <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Demo</title>
-    </head>
-    <body>
-        <a href="http://jquery.com/">jQuery</a>
-        <div class="result"></div>
-        <script src="jquery.js"></script>
-        <%= yield %>
-    </body>
-  </html>
-
 @@index
-  <script>
-  $( document ).ready(function() {
-      $( "a" ).click(function( event ) {
-          event.preventDefault();
-          $.get( "/chuchu", {nombres: ["juan", "pedro"]}, function( data ) {
-            $( ".result" ).html( data["answer"]);
-            console.log(data);
-            alert( "Load was performed." );
-          }, 'json');
-      });
-  });
-  </script>
 
-@@tutu
-  <h1>Not an Ajax Request!</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+      /*
+      $.getScript("demo_ajax_script.js");
+      */
+      $.get( "/demo_ajax_script.js", function( data ) {
+          //console.log(data);
+        }, 'script');
+    });
+});
+</script>
+</head>
+<body>
+
+<button>Use Ajax to get and then run a JavaScript</button>
+</body>
+</html>
+
