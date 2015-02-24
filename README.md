@@ -1,6 +1,6 @@
 # Ruby Sinatra and jQuery Simple Examples
 
-Thre are four branches:
+There are four branches:
 
       [~/javascript/jquery/how-jquery-works-tutorial(master)]$ git branch 
         getallparams
