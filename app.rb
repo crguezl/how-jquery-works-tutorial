@@ -1,4 +1,6 @@
 require 'sinatra'
+require 'sinatra/reloader' if development?
+require 'pp'
 
 set :public_folder, File.dirname(__FILE__) + '/starterkit'
 
@@ -7,8 +9,10 @@ get '/' do
 end
 
 get '/chuchu' do
+  pp env
+  p params[:nombres]
   if request.xhr? # is an ajax request
-    "hello world!"
+   %q{{"answer": "Server responds: hello world!"}}
   else 
     erb :tutu
   end
@@ -36,10 +40,11 @@ __END__
   $( document ).ready(function() {
       $( "a" ).click(function( event ) {
           event.preventDefault();
-          $.get( "/chuchu", function( data ) {
-            $( ".result" ).html( data );
+          $.get( "/chuchu", {nombres: ["juan", "pedro"]}, function( data ) {
+            $( ".result" ).html( data["answer"]);
+            console.log(data);
             alert( "Load was performed." );
-          });
+          }, 'json');
       });
   });
   </script>
