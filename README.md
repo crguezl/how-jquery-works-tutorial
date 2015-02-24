@@ -1,4 +1,4 @@
-# Ruby Sinatra and jQuery Simple Examples
+# Ruby Sinatra and jQuery `get` Ajax Simple Examples
 
 There are four branches:
 
