@@ -10,7 +10,7 @@ Thre are four branches:
 * `getallparams` shows how to use jQuery [`get`](http://api.jquery.com/jquery.get/) 
   exemplifying how to use all the `get` params.
 
-  There is a *express.js* version in this branch composed of these files:
+  There is a version using *express.js* instead of *Sinatra* in this branch composed of these files:
 
                 gulpfile.js                  
                 node_modules
