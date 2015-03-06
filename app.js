@@ -1,5 +1,5 @@
-var express = require('express')
-var app = express()
+var express = require('express');
+var app = express();
 var path = require('path');
 
 app.use(express.static('public'));
@@ -22,19 +22,7 @@ app.get('/chuchu', function (req, res) {
   else {
     res.send('not an ajax request');
   }
-})
-
-/*
-get '/chuchu' do
-  pp env
-  p params[:nombres]
-  if request.xhr? # is an ajax request
-   %q{{"answer": "Server responds: hello world!"}}
-  else 
-    erb :tutu
-  end
-end
-*/
+});
 
 var server = app.listen(3000, function () {
 
@@ -43,4 +31,4 @@ var server = app.listen(3000, function () {
 
   console.log('Example app listening at http://%s:%s', host, port)
 
-})
+});

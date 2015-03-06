@@ -15,7 +15,7 @@ Thre are four branches:
                 gulpfile.js                  
                 app.js                       
                 package.json
-                views
+                views/index.ejs
                 README.md                    
 
 * `getscript` shows how to use jQuery [`get`](http://api.jquery.com/jquery.get/) with
