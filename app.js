@@ -9,17 +9,19 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.get('/', function (req, res) {
-  //res.send('Hello World!')
   res.render('index', { title: 'Express' });
 })
 
-/*
- var router = express.Router();
-  module.exports = router; 
-*/
 app.get('/chuchu', function (req, res) {
-  console.log(req.query);
-  res.send('{"answer": "Server responds: hello world!"}')
+  var isAjaxRequest = req.xhr;
+  console.log(isAjaxRequest);
+  if (isAjaxRequest) {
+    console.log(req.query);
+    res.send('{"answer": "Server responds: hello world!"}')
+  }
+  else {
+    res.send('not an ajax request');
+  }
 })
 
 /*
