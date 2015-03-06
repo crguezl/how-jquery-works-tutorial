@@ -13,7 +13,6 @@ Thre are four branches:
   There is a version using *express.js* instead of *Sinatra* in this branch composed of these files:
 
                 gulpfile.js                  
-                node_modules
                 app.js                       
                 package.json
                 views
