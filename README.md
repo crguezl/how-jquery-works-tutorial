@@ -16,10 +16,8 @@ Thre are four branches:
                 node_modules
                 app.js                       
                 package.json
-                Procfile         
                 views
                 README.md                    
-                config.ru 
 
 * `getscript` shows how to use jQuery [`get`](http://api.jquery.com/jquery.get/) with
 `dataType` `script`
