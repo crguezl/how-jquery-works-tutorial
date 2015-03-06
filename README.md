@@ -8,6 +8,19 @@ Thre are four branches:
 
 * `master` shows how to use jQuery [`get`](http://api.jquery.com/jquery.get/) on the client side and [Sinatra](http://www.sinatrarb.com/) on the server side
 * `getallparams` shows how to use jQuery [`get`](http://api.jquery.com/jquery.get/) 
+  exemplifying how to use all the `get` params.
+
+  There is a *express.js* version in this branch composed of these files:
+
+                gulpfile.js                  
+                node_modules
+                app.js                       
+                package.json
+                Procfile         
+                views
+                README.md                    
+                config.ru 
+
 * `getscript` shows how to use jQuery [`get`](http://api.jquery.com/jquery.get/) with
 `dataType` `script`
 * `separated` shows how to put the views/templates in separated files
