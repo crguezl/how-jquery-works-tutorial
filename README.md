@@ -16,6 +16,7 @@ Thre are four branches:
                 app.js                       
                 package.json
                 views/index.ejs
+                views/layout.ejs
                 README.md                    
 
 * `getscript` shows how to use jQuery [`get`](http://api.jquery.com/jquery.get/) with
