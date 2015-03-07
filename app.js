@@ -1,12 +1,15 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-
-app.use(express.static('public'));
+var expressLayouts = require('express-ejs-layouts');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+//app.set('layout', 'myLayout') // defaults to 'layout'  '
+
+app.use(expressLayouts);
+app.use(express.static('public'));
 
 app.get('/', function (req, res) {
   res.render('index', { title: 'Express' });
