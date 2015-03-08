@@ -2,6 +2,7 @@ There are four branches:
 
       [~/javascript/jquery/how-jquery-works-tutorial(master)]$ git branch 
         getallparams # shows the use of jQuery AJAX get method with all its params
+        heroku       # shows how to deploy the app in Heroku
         getscript
       * master
         separated
