@@ -1,4 +1,4 @@
-Thre are four branches:
+There are four branches:
 
       [~/javascript/jquery/how-jquery-works-tutorial(master)]$ git branch 
         getallparams # shows the use of jQuery AJAX get method with all its params
@@ -22,3 +22,7 @@ Thre are four branches:
 * `getscript` shows how to use jQuery [`get`](http://api.jquery.com/jquery.get/) with
 `dataType` `script`
 * `separated` shows how to put the views/templates in separated files
+
+## See
+
+* [Using layouts in EJS using express-ejs-layouts](http://blog.hugeaim.com/2013/01/20/using-layouts-in-ejs-using-express-ejs-layouts/)
