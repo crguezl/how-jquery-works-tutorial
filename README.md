@@ -1,4 +1,4 @@
-There are four branches:
+There are five branches:
 
       [~/javascript/jquery/how-jquery-works-tutorial(master)]$ git branch 
         getallparams # shows the use of jQuery AJAX get method with all its params
